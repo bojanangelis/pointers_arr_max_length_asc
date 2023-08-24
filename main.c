@@ -10,6 +10,7 @@ void findMaxAscSubarray(int *array, int n, int *maxStart, int *maxLength) {
         while (*(array + i) < *(array + i + 1)) {
             ++i;
             length++;
+            if (i == (n - 1)) break;
         }
         if (length > *maxLength) {
             *maxLength = length;
